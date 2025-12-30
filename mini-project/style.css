@@ -170,6 +170,7 @@ span {
 
 .about-img img {
     width: 35vw;
+    border-radius: 10%;
 }
 
 .heading {
@@ -223,12 +224,12 @@ span {
     color: var(--main-color);
 }
 
-.services-box h3 {
-    font-size: 2.6rem;
+.services-box h4 {
+    font-size: 2.2rem;
 }
 
 .services-box p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: 1rem 0 3rem;
 }
 
