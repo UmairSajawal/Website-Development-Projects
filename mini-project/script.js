@@ -51,9 +51,47 @@ ScrollReveal().reveal('.home-content p, .about-content', {origin: 'right'});
     /* =================== Typed JS ===================== */
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Full Stack Developer', 'Software Engineer', 'IT And Networking'],
-    typeSpeed: 100,
-    backSpeed: 100,
+    strings: ['Web Developer', 'CCTV Installer', 'Software Engineer'],
+    typeSpeed: 30,
+    backSpeed: 30,
     backDelay: 1000,
     loop: true
 });
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById("submit-btn");
+    const successMsg = document.getElementById("success-msg");
+
+    // Immediately hide button and show success message
+    submitBtn.style.display = "none";
+    successMsg.style.display = "block";
+
+    emailjs.sendForm(
+        "service_qr8ccpw",
+        "template_rv039vt",
+        this
+    ).then(() => {
+        // email sent successfully, nothing else needed
+    }, (error) => {
+        // if email fails, show alert
+        alert("Message failed to send. Please try again.");
+        console.log(error);
+
+        // revert button and hide success message
+        submitBtn.style.display = "block";
+        successMsg.style.display = "none";
+    });
+
+    // Reset the form instantly
+    this.reset();
+});
+
+
+
+
+
+
+
+
