@@ -51,7 +51,7 @@ ScrollReveal().reveal('.home-content p, .about-content', {origin: 'right'});
     /* =================== Typed JS ===================== */
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Web Developer', 'CCTV Installer', 'Software Engineer'],
+    strings: ['Web Developer', 'CCTV Installer', 'IT Technician'],
     typeSpeed: 30,
     backSpeed: 30,
     backDelay: 1000,
@@ -87,11 +87,3 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     // Reset the form instantly
     this.reset();
 });
-
-
-
-
-
-
-
-
